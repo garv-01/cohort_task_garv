@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+main{
+    height: 100%;
+    width:100%;
+    background-color: black;
+    display: flex;
+}
+.right{
+    height: 100%;
+    width: 50%;
+    background-color: #B6342B;
+
+}
+
+.left{
+    height: 100%;
+    width:50%;
+    background-color: white;
+}
+.left .top-left{
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    font-family: 'Segoe UI';
+    
+    
+}
+.left h1{
+    font-size: 7px;
+    position: absolute;
+    left:7px;
+}
+
+
+
+ .search-bar {
+    height:6px;
+    width:60px;
+    border-radius: 10px;
+    gap:15px;
+    background-color: #EFEFEF;
+    font-size: 3.5px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:2.5px;
+    color:#979494
+
+}
+.search-bar i {
+    position: relative;
+    left:5px;
+}
+.left span{
+    font-family: PlayFair;
+    position:absolute;
+    transform: translate(-35%,50%) rotate(-90deg);
+    top:40%;
+    left: 0.2vw;
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+.categ{
+    height:50%;
+    width:25%;
+    /* background-color: green; */
+    position: absolute;
+    transform: translate(50%,30%);
+    gap:2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.categ hr{
+    border: 0.2px solid  #a9a6a6;
+    width: 35%;
+}
+.categ h5{
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-family: 'Segoe UI';
+}
+.categ h4{
+    font-size: 1vw;
+    font-weight: 400;
+    font-family: 'Segoe UI';
+}
+
+.one-dot,.two-dot,.three-dot,.four-dot,.five-dot,.six-dot{
+    width:1.2px;
+    height: 1.2px;
+    background-color: red;
+    border-radius: 50%;
+    position:absolute;
+    top: 3px;
+    left:-3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.two-dot{
+    position:absolute;
+    top:20px;
+}
+.three-dot{
+    position:absolute;
+    top:36px;
+}
+ .four-dot{
+    position:absolute;
+    top:53px;
+}
+ .five-dot{
+    position: absolute;
+    top:70px
+ }
+.six-dot{
+    position:absolute;
+    top:86px;
+} 
+
+.right{
+    width: 50%;
+    height: 100%;
+    background-color: #B6332B;
+}
+.top-right-nav{
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    padding-top:1.5px;
+}
+
+.top-right-nav h5{
+    font-size: 4px;
+    font-weight:400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right .insect-name{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.right .insect-name span{
+    margin-top: 10px;
+     font-size: 10px;
+    color:white;
+
+} 
+
+.right .shape_details{
+    width:20vw;
+    height: 67.5vh;
+    position: absolute;
+    left: 65%;
+}
+
+.shape{
+    height: 20px;
+    width: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top:10px;
+}
+.shape img{
+    position: relative;
+    top:8px;
+    height: 27px;
+    width: 30px;
+}
+.shape p{
+    font-size: 3px;
+    color:white;
+    position: relative;
+    top:10px;
+    left:3.5px;
+}
+.shape hr{
+    border:solid white 0.2px;
+    width:50px;
+    position: relative;
+    top:-5px;
+    left: 20px;
+    transform: rotate(90deg);
+}
+
+.right .details{
+    /* background-color: yellow; */
+    width:20vw;
+    height: 50vh;
+    position: absolute;
+    top: 10%;
+    left: 59.6%;
+    display: flex;
+    flex-direction: column;
+    font-size: 7px;
+    color:#e2c59f;
+    font-family:'Segoe UI';
+}
+
+.right .details p{
+    font-size: 3px;
+    color:white;
+    position: relative;
+    left:10px;
+    top:-8px;
+}
+
+.right .details #ruler{
+    color:white;
+}
+
+.one{
+    color:#e2c59f;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    position: absolute;
+    top:60%;
+    font-size: 10px;
+}
+.two{
+    height:15px;
+    width:100%;
+    /* background-color: rgba(0, 0, 255, 0.148); */
+    position: absolute;
+    top:75%;
+}
+.text1 , .text2{
+    height:4px;
+    width:8px;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.579);
+}
+.white1 , .white2{
+    height:4px;
+    width:4px;
+    border-radius: 20px;
+    background-color: white;
+}
+.text2{
+    position: relative;
+    top:2px;
+}
+
+.text1 p, .text2 p{
+    color:white;
+    font-size: 4px;
+    font-family: 'Segoe UI';
+    /* background-color: green; */
+    width: 55px;
+    position: relative;
+    left:10px;
+    bottom: 1px;
+}
+
+.three button{
+    background-color: #e2c59f;
+    border:none;
+    border-radius: 2px;
+    width: 45px;
+    height: 12px;
+    font-size: 4px;
+    font-weight: 500;
+    position: absolute;
+    top:55vh;
+    left:0%;
+}
+.bottom {
+    position: relative;
+    left:10px;
+    top:-10px;
+}
+.bottom img {
+    display: block;
+    width: 40px;
+    position: relative;
+    top:-29.5px;
+    left:-76px;
+    z-index: 1;
+}
+
