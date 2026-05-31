@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:white;
+}
+#bottom-line{
+    width: 100vw;
+    height:0.3vh;
+    background-color: #DF7804;
+    position:absolute;
+    top: calc(100% - 10vh);
+    border: none;
+    border-radius: 100%;
+}
+main{
+    height:100%;
+    width:100%;
+    background-color: #0B0907;
+    
+}
+nav{
+    height: 10vh;
+    width: 100vw;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+nav .left{
+    height:100%;
+    width:20%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav .center{
+    height:100%;
+    width:60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+}
+
+nav .center #d-one{
+    height: 5px;
+    width: 5px;
+    background-color:#d88727;
+    border-radius:50%;
+}
+
+
+
+
+nav .right{
+    height:100%;
+    width:20%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    color: #d88727;
+
+}
+
+nav .right span{
+    color: white;
+}
+
+.mid-center{
+    height: 40%;;
+    width:100vw;
+    background-color: #0E0F10;
+    border: 2px solid #d88727;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    justify-content: center;
+    padding:10px;
+    position: absolute;
+    top:49%;   
+}
+
+.mid-center .c-left{
+    height: 100%;
+    width:20%;
+    background-color: red;
+    overflow: hidden;
+}
+
+.mid-center .c-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mid-center .c-center{
+     height: 100%;
+    width:55%;
+    /* background-color: green; */
+}
+
+.mid-center .c-center span{
+    color:#d88727;
+    font-size: 10px;
+    font-weight: 600;
+}
+.mid-center .c-center h4{
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.explore {
+    width:165px;
+    height:35px;
+    /* background-color: yellow; */
+    position: absolute;
+    top: 75%;
+    border: 1px solid #d88727;
+    border-radius: 25px;
+    color:#d88727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    font-weight: 500;
+}
+.explore i{
+    color:#d88727;
+}
+
+.mid-center .c-right{
+     height: 100%;
+    width:20%;
+    background-color: royalblue;
+    object-fit: contain;
+}
+
+.mid-center .c-right img{
+height :100%;
+width:100%;
+}
+
+.top{
+    height:35%;
+    width:90vw;
+    margin:0 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+
+}
+
+.top .k{
+    height: 100%;
+    width: 15%;
+    /* background-color: green; */
+    border:2px solid #d88727;
+    border-radius: 20px;
+    box-shadow:0 0 7px #d88727 inset;
+    margin-top: 10px;
+    
+}
+
+.top .k .img{
+    height: 60%;
+    width: 100%;
+    /* background-color: royalblue; */
+    border-radius: 25px;
+}
+
+.top .k .details{
+    height: 40%;
+    width: 100%;
+    /* background-color: crimson; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+.top .k .details #d-name h3{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top:10px;
+}
+.top .k .details p{
+    font-size: 10px;
+    position: relative;
+    top:10px;
+}
+
+#l1{
+    height: .1rem;
+    width:15%;
+    /* position: absolute; */
+    /* left:18vw; */
+    margin-top: 2px;
+    border: none;
+    background-color: #d88727;
+    position: relative;
+    top:10px;
+    left: 90px;
+}
+
+.top .k .details #amt1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #d88727;
+    position: relative;
+    top:10px;
+}
+
+#krds{
+    height:100px;
+    width:50px;
+    background-color: black;
+}
+
+.k img{
+    height: 100%;
+    width:100%;
+    border-radius: 25px;
+}
+.hero{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+.seperator{
+    width:100vw;
+    height:5vh;
+    /* background-color: yellow; */
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.seperator img{
+    height:30px;
+    width:30px;
+    position: absolute;
+    left:50vw;
+    top:45px;
+    background-color: black;
+}
+
+#s1{
+    transform: rotate(180deg);
+}
+#s2{
+    position: absolute;
+}
+

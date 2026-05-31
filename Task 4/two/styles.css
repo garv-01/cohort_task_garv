@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main{
+    height:100%;
+    width:100%;
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    }
+
+nav{
+    height: 15%;
+    width:100vw;
+    /* background-color: royalblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}   
+
+nav-left{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+nav img{
+    width:50px;
+    height:50px;
+    position: relative;
+    top:15px;
+    left:-10px;
+}
+
+nav #nav-center{
+    display: flex;
+    gap:20px;
+}
+
+nav #nav-left span{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+nav #nav-center h4{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+nav #get{
+    height: 50px;
+    width:120px;
+    background-color: #131212;
+    color:white;
+    font-size: 17px;
+    font-weight: 550;
+    border:none;
+    border-radius: 12px;
+}
+#center{
+    height:12rem ;
+    width: 100vw;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom:50px;
+}
+
+#center span{
+    font-weight: 500;
+    font-size: 7rem;
+}
+
+.tags .tag{
+    font-size: 17px;
+    font-weight: 500;
+} 
+
+.tags{
+    
+    width:100vw;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+#one{
+    background-color: red;
+    height: 85%;
+    width: 65px;
+    padding: 10px;
+    border-radius:  20px;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tag{
+    background-color: #131212;
+    height: 85%;
+    width: 85px;
+    padding: 10px;
+    border-radius:  20px;
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tags #four{
+    width: 140px;
+}
+
+.cards{
+    height:calc(85% - 12rem - 50px);
+    width:90vw;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:20px;
+    margin-left: 70px;
+
+}
+
+.k1{
+    height: 95%;
+    width : 27%;
+    background-color: #131212;
+    border-radius: 22px;
+}
+
+.k1 .top{
+    height: 50%;
+    width: 100%;
+    background-color: red;
+    border-radius: 24.5px;
+}
+.k1 .bottom{
+    height: 50%;
+    width: 100%;
+    /* background-color: yellow; */
+    border-radius:  0 0 25px 25px;
+}
+.k1 .bottom .t1{
+    height: 20px;
+    width:50px;
+    background-color: #561E0A;
+    text-align: center;
+    border-radius: 25px;
+    position: relative;
+    top:10px;
+    left:15px;
+}
+.k1 .bottom p{
+    color: #F89C65;
+    font-size: 15px;
+    font-weight: 300;
+
+}
+
+.bottom1{
+    height:100%;
+    width:100%;
+    /* background-color: yellow; */
+}
+
+.bottom1 #market{
+    height: 20px;
+    width:100px;
+    background-color: #561E0A;
+    text-align: center;
+    border-radius: 25px;
+    position: relative;
+    top:10px;
+    left:15px;
+}
+
+.k1 .bottom .t2{
+    height: 20px;
+    width:100px;
+    font-weight:300 ;
+    background-color: #561E0A;
+    text-align: center;
+    border-radius: 25px;
+    position: relative;
+    top:10px;
+    left:15px;
+}
+
+.bottom1 #market p{
+    color: #F89C65;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.content{
+    width: 58%;
+    align-items:flex-start;
+    position: relative;
+    left: 10px;
+    top:15px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+span{
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    left:10px;
+}
+.top  #cat{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
