@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+    height: 50%;
+    width: 55%;
+    background-color: gold;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tsk-inpt{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    padding: 2%;
+    
+}
+
+.tsk-inpt p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.tsk-inpt input{
+    height: 5vh;
+    width:30vw;
+    padding:2%;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    
+}
+#addBtn,.edit,.del,.complete{
+    height: 5vh;
+    width: 3vw;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+#addBtn{
+    background-color:green;
+    color:white;
+}
+.edit{
+    background-color:orangered;
+    color:white;
+}
+.del{
+    background-color:red;
+    color:white;
+}
+.complete{
+    width: 5vw;
+    background-color:lightgreen;
+    color:white;
+}
+.tsk-show{
+    height: 12vh;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap :10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%;
+    border-radius: 12px;
+    
+}
+.btn{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.tsk-item{
+    height: 100%;
+    width: 100%;
+    /* background-color: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.disabled{
+    cursor:not-allowed;
+}
