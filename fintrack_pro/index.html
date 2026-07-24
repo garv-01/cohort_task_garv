@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+          <!-- NAVBAR -->
+           <nav>
+            <!--USER DETAILS-->
+            <div id="user_details">
+                <div id="user">
+                    <p id="username">user</p>
+                </div>
+            </div>
+            <button class="logout-btn"> <i class="ri-logout-box-r-line"></i> Logout</button>
+           </nav>
+           <!-- SIDEBAR -->
+           <div id="sidebar">
+            <div id="sidebar-logo">
+                <div class="sidebar_left"><i class="ri-stack-fill"></i></div>
+                <div class="sidebar_right">
+                    <h2 class="sidebar-logo-heading">FinTrack Pro</h2>
+                    <p>Enterprise Finance</p>
+                </div>
+            </div>
+
+            <!--SIDEBAR MENU-->
+            <div class="options">
+                <div class="option1">
+                    <div class="menu" id="dashboard"><i class="ri-dashboard-horizontal-line"></i> Dashboard</div>
+                    <div class="menu" id="setting"><i class="ri-settings-3-fill"></i> Setting</div>
+                </div>
+                <div class="option2">
+                    <div class="menu" id="add_transaction"><i class="ri-add-line"></i>Add Transaction</div>
+                </div>
+            </div>
+           </div>
+
+           <!--MAIN CONTENT AREA-->
+           <div class="hero-section">
+             <!--HEADER-->
+                <header>
+                <h1 class="finan">Financial Overview</h1>
+                <p>Real-time tracking application</p>
+                </header>
+             <!--KPI CARDS-->
+                <div class="kpi">
+                     <div class="cards" id="card1">
+                        <div  id="card1-icon" class="card-icon">
+                            <img src="/bank-building.png" alt="bank">
+                        </div>
+                        <p>Current Balance</p>
+                        <h1 id="crd1">₹0.00</h1>
+                     </div>
+
+
+                     <div class="cards" id="card2">
+                        <div id="card2-icon" class="card-icon">
+                            <img src="/trend.png" alt="trend up arrow">
+                        </div>
+                        <p>Total Income</p>
+                        <h1 id="crd2">₹0.00</h1>
+                     </div>
+
+
+                     <div class="cards" id="card3">
+                        <div id="card3-icon" class="card-icon">
+                            <img src="/downtrend.png" alt="trend down arrow">
+                        </div>
+                        <p>Total Expense</p>
+                        <h1 id="crd3">₹0.00</h1>
+                     </div>
+
+
+                     <div class="cards" id="card4">
+                        <div id="card4-icon" class="card-icon">
+                            <img src="/piggy.png" alt="piggy bank">
+                        </div>
+                        <p>Total Transactions</p>
+                        <h1 id="crd4">0</h1>
+                     </div>
+                </div>
+
+                <!--CASH FLOW ANALYSIS-->
+                <div class="chart">
+                    <h1 class="chrt-flow-head">Cash Flow Analysis</h1>
+                    <!--CHART SECTION-->
+                    <div class="chart-section">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+
+                <!--DARK MODE-->
+                <div class="drk-mode">
+                    <header>
+                        <h1 class="pref">Prefrences</h1>
+                    </header>
+                    <div class="toogle">
+                        <div class="toggle-content">
+                            <div class="text">
+                                <p class="drkmode-text">Dark Mode</p>
+                            </div>
+                            <div class="toggle-btn">
+                                <div class="btn"></div>
+                            </div>
+                        </div>
+                        <div class="reset-block">
+                                <i class="ri-delete-bin-line">Reset All Data</i> 
+                        </div>
+                    </div>
+                </div>
+
+                <!--ALL TRANSACTIONS-->
+                <div class="transactions-details">
+                   <div class="td-heading">
+                        <div class="top-heading">
+                            <h1 class="alltranst">All Transactions</h1>
+                        </div>
+                        <div class="btm-heading">
+                            <div class="srch-bar">
+                                <input class="searchbar-input" type="text" placeholder="Search Transaction...">
+                                <i class="srch-icon"></i>
+                            </div>
+                            <div class="drp-dwn">
+                                <select id="transactions-type">
+                                    <option value="">All Types</option>
+                                    <option value="incomeOnly">Income Only</option>
+                                    <option value="expenseOnly">Expense Only</option>
+                                </select>
+                            </div>
+                        </div> 
+                   </div>
+                   <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>DATE</th>
+                                <th>DESCRIPTION</th>
+                                <th>CATEGORY</th>
+                                <th>AMOUNT</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="date">2026-07-20</td>
+                                <td class="description">Groceries</td>
+                                <td class="food">
+                                    <span class="category">Food</span>
+                                </td>
+                                <td class="expense">-₹1200.00</td>
+                                <td class="actions">
+                                    <img class="pen-icon" src="/pen.png" alt="pen">
+                                    <img class="bin-icon" src="/trash-bin.png" alt="">
+                                    
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                   </div>
+                </div>
+               
+            </div>
+
+            <!--SETTING PAGE-->
+            <div class="setting">
+                <header class="setting-header">
+                    <div class="head1">
+                        <h1 class="SettingHead">Setting</h1>
+                    </div>
+                    <div class="head2">
+                        <p>Manage your account profile and app formatting.</p>
+                    </div>
+                </header>
+                <div class="profile-details">
+                    <div class="profile-details-head">
+                        <h1 class="profile-det">Profile Details</h1>
+                    </div>
+                    <div class="details">
+                        <div class="detail1">
+                            <header>
+                                <p class="full-name">Full Name</p>
+                            </header>
+                            <input class="name-div" type="text">
+                        </div>
+                        <div class="detail2">
+                            <header>
+                                <p class="currency-type">Primary Currency</p>
+                            </header>
+                            <div class="currency-list">
+                                <select  id="drpdwn-currency-list">
+                                    <option value="₹">INR (₹)</option>
+                                    <option value="$">USD ($)</option>
+                                    <option value="£">GBP (£)</option>
+                                    <option value="€">EUR (€)</option>
+                                    <option value="¥">JYP (¥)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </div>
+                
+            </div>
+
+            <!--ADD TRANSACTION FORM-->
+            <div class="main-content-area">
+                <div class="transaction-form">
+                    <header class="transaction-header">
+                        <span><h4>Add Transaction</h4></span>
+                        <i class="ri-close-line"></i>
+                    </header>
+                    <section class="type-of-expense">
+                        <header>Type</header>
+                        <select id="exp-inc">
+                            <option value="expense">Expense</option>
+                            <option value="income">Income</option>
+                        </select>
+                    </section>
+                    <section class="description-of-expense">
+                        <header>Description</header>
+                        <input id="des-for-exp" type="text" placeholder="e.g. Amazon,Salary,Coffee">
+                    </section>
+                    <section class="amount-of-expense-and-date">
+                       <div id="amount-frm">
+                            <header>Amount</header>
+                            <input id="amt-input" type="number" min="0">
+                       </div>
+                         <div id="date-frm">
+                            <header>Date</header>
+                            <input id="date-input" type="date">
+                       </div>
+                    </section>
+                    <section class="category-of-expense">
+                        <header>Category</header>
+                        <select id="categ">
+                            <option value="">Select Your Category</option>
+                            <option value="Food and Dining">Food and Dining</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Recharge & Bills">Recharge & Bills</option>
+                            <option value="Petrol & Auto">Petrol & Auto</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="Salary">Salary</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </section>
+                    <section class="save-transaction-btn">
+                        <button id="save-transaction-btn" type="submit"> Save Transaction</button>
+                    </section>
+                </div>
+            </div>
+            
+    </main>
+  
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

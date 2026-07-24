@@ -1,0 +1,661 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+main{
+    height: calc(100% + 50vh);
+    width:100%;
+    background-color: #F8F9FB;
+}
+
+nav{
+    height: 10vh;
+    width: 83%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    padding: 0 10px;
+    gap:10px;
+    font-family: 'Inter';
+    border-bottom:1px solid #E5E7EB;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+}
+
+nav button{
+    height: 5vh;
+    width: 6vw;
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 8px;
+    font-family: 'Inter';
+}
+
+nav #user_details{
+    height: 5vh;
+    width: 6vw;
+    background-color: transparent;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    /* border-left: 1px solid black ; */
+}
+#user{
+    height: 50%;
+    width:60%;
+    /* background-color: lightblue; */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-left: 1px solid #E5E7EB ;
+}
+
+#sidebar{
+    height:100%;
+    width: 17%;
+    background-color: white;
+    border-right: 1px solid #E5E7EB ;
+    padding: 5px 10px;
+    position: fixed;
+}
+#sidebar-logo{
+    height: 10%;
+    width: 100%;
+    /* background-color: lightblue; */
+    display: flex;
+}
+.sidebar_left{
+    height: 100%;
+    width: 30%;
+    background-color: transparent;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 3rem;
+    padding-right: 10px;
+}
+.sidebar_right{
+    height: 100%;
+    width: 70%;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5px;
+}
+.sidebar_right p{
+    color: #6b7280;
+}
+
+.options{
+    height:90%;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.option1{
+    height: 20%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    
+}
+#dashboard {
+    background-color: #DBEAFE;
+    color: #1E40AF;
+    height:40%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+#setting{
+    background-color: transparent;
+    color: black;
+    height:40%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.option2{
+    height: 15%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+#add_transaction{
+    height:70%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+.hero-section{
+    height:calc(100% - 10vh);
+    width:83%;
+    background-color: #F8F9FB;
+    position: absolute;
+    top:10vh;
+    left:17%;
+    padding:15px;
+}
+header{
+    height: 10vh;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Inter';
+}
+header p{
+    color:#6b7280;
+    font-size:0.9rem
+}
+header h1{
+    font-size: 1.7rem;
+}
+.kpi{
+    height: 25vh;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cards{
+    height: 20vh;
+    width: 18vw;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    padding: 10px;
+}
+.card-icon{
+    height: 5.5vh;
+    width:3vw;
+    background-color: lightcoral;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#card1-icon{
+    background-color:#DBEAFE ;
+}
+#card2-icon{
+    background-color:#DCFCE7 ;
+}
+#card3-icon{
+    background-color:#DCFCE7 ;
+}
+#card4-icon{
+    background-color:#DBEAFE ;
+}
+.cards p{
+    margin: 10px 0;
+    color:#6b7280;
+    font-family: 'Inter';
+    font-size: 0.9rem;
+}
+.cards h1{
+    font-family: 'Inter';
+    font-size: 1.5rem;
+}
+
+#crd1{
+    color:black;
+}
+#crd2{
+    color:#166534;
+}
+#crd3{
+    color:#991B1B;
+}
+#crd4{
+    color:black;
+}
+
+.chart{
+    height: 60%;
+    width: 70%;
+    background-color: white;
+    border-radius: 8px;
+    margin-top:20px;
+    border: 1px solid #E5E7EB;
+    font-family: 'Inter';
+    padding:20px 10px ;
+}
+
+.chart-section{
+    height: 90%;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.392);
+}
+.drk-mode{
+    height:25%;
+    width: 28%;
+    background-color: white;
+    position: absolute;
+    top:44%;
+    left:70%;
+    margin-left:10px;
+    border-radius:8px;
+    border:1px solid #E5E7EB;
+    padding:10px
+}
+.drk-mode header{
+    height: 20%;
+    width:100%;
+    background-color: transparent;
+}
+.toogle{
+    height:50%;
+    width:100%;
+    background-color:transparent;
+    border-bottom:1px solid #E5E7EB;
+}
+.toggle-content{
+    height: 70%;
+    width:100%;
+    background-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle-btn{
+    height:20px;
+    width:45px;
+    border-radius:10px;
+    border:1px solid black;
+    padding:2px;
+    font-family: 'Inter';
+    font-weight:800;
+}
+
+.toggle-btn .btn{
+    height:100%;
+    width:40%;
+    border-radius:50%;
+    background-color: red;
+}
+
+.reset-block{
+    height:30px;
+    width: 100%;
+    background-color: #FFF5F5;
+    border:1px solid #E5E7EB;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top:5vh;
+    color:#991B1B;
+    font-family: 'Inter';
+}
+
+.transactions-details{
+    height:40vh;
+    width:70%;
+    background-color: white;
+    margin-top: 10px;
+    padding:10px;
+    font-family: 'Inter';
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E5E7EB;
+}
+
+.td-heading{
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.top-heading{
+    height: 35%;
+    width: 100%;
+    background-color: transparent;
+}
+.btm-heading{
+   height: 45%;
+    width: 100%;
+    background-color: transparent; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.srch-bar{
+    height: 70%;
+    width: 45%;
+    background-color: #F8F9FB;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.srch-bar input{
+    height: 100%;
+    width: 80%;
+    font-size: 1rem;
+    color:#6b7280;
+    text-align:start;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.drp-dwn{
+    height: 70%;
+    width: 45%;
+    background-color: #F8F9FB;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.drp-dwn select{
+    height: 80%;
+    width: 100%;
+    border:none;
+    background-color: transparent;
+    font-family: 'Inter';
+}
+.table{
+    height: 50%;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border:1px solid #E5E7EB
+}
+
+
+
+table{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    border:none;
+    border-collapse: collapse;
+    border-radius: 6px;
+}
+
+thead tr{
+    font-family: 'Inter';
+    color:#6B7280;
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+
+thead th{
+    border-bottom:1px solid #E5E7EB ;
+}
+tr{
+    font-size: 0.8rem;
+    
+}
+td{
+    height: 50%;
+    border-bottom:1px solid #E5E7EB;
+}
+#myChart{
+    height:100%;
+    width:100%;
+    /* background-color: white; */
+}
+
+#setting:hover{
+    color: #1E40AF;
+    background-color: #DBEAFE;
+}
+
+#dashboard:hover{
+    color: #1E40AF;
+    background-color: #DBEAFE;
+}
+
+.setting{
+    height:50vh;
+    width:50vw;
+    background-color: transparent;
+    position: relative;
+    top: 10vh;
+    left:17%;
+}
+.setting-header{
+    height:10vh;
+    width: 50vw;
+    background-color: transparent;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding:10px ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+}
+.profile-details{
+    height: 40vh;
+    width: 50vw;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px solid #E5E7EB;
+    padding: 0 10px;
+}
+.details{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;   
+}
+
+.detail1, .detail2{
+    height: 50%;
+    width: 40%;
+    background-color: transparent;
+}
+.detail1 header , .detail2 header{
+    height: 40%;
+    background-color: transparent;
+}
+.detail1 input{
+    height: 60%;
+    width: 100%;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding:0 10px;
+}
+
+.detail2 #drpdwn-currency-list{
+    height: 4vh;
+    width: 100%;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    font-family: 'Inter';
+    padding: 0 10px;
+}
+.save-btn{
+    height: 6vh;
+    width: 25%;
+    position: relative;
+    top:20%;
+    background-color: black;
+    color: white;
+    font-family: 'Inter';
+    border-radius: 5px;
+    border:none;
+}
+.transaction-form{
+    height: 70vh;
+    width: 25vw;
+    background-color: white;
+    position: relative;
+    left:35%;
+    top:11%;
+    border-radius:5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid #E5E7EB;
+}
+.transaction-header{
+    height: 12%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Inter';
+}
+.type-of-expense,.description-of-expense,.amount-of-expense-and-date,.category-of-expense{
+    height:15%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.type-of-expense header , .description-of-expense header,.category-of-expense header{
+    background-color:transparent;
+    height: 30%;
+}
+.type-of-expense #exp-inc{
+    height: 65%;
+    width: 100%;
+    border:1px solid  #E5E7EB;
+    border-radius: 5px;
+    margin: 2px 0;
+}
+.description-of-expense input,#categ{
+    height: 70%;
+    width: 100%;
+    font-family: 'Inter';
+    border-radius: 5px;
+    border:1px solid  #E5E7EB;
+    padding: 5px;
+}
+.amount-of-expense-and-date{
+    display: flex;
+    justify-content: space-between;
+}
+#amount-frm,#date-frm{
+    height: 100%;
+    width: 45%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+#amount-frm header{
+    height:25%;
+    width: 100%;
+    background-color: transparent;
+}
+#amount-frm input{
+    height: 75%;
+    width: 100%;
+    border: 1px solid  #E5E7EB;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#date-frm header{
+    height:25%;
+    width: 100%;
+    background-color: transparent;
+}
+#date-frm input{
+    height: 75%;
+    width: 100%;
+    border: 1px solid  #E5E7EB;
+    border-radius: 5px;
+}
+.save-transaction-btn{
+    height: 7vh;
+    width: 100%;
+    background-color: transparent;
+    margin-top:20px;
+}
+.save-transaction-btn button{
+    height: 5vh;
+    width: 100%;
+    color:white;
+    background-color: black;
+    font-family: 'Inter';
+    border:none;
+    border-radius: 5px;
+}
+.main-content-area{
+    height: calc(100% + 40vh);
+    width: calc(100% - 17%);
+    background-color:rgba(0, 0, 0, 0.145);
+    position: absolute;
+    left:17%;
+    top:10vh
+}
+
+.transaction-form,.setting,.main-content-area{
+    display: none;
+}
+
+
+
+/*TRANISITION OF TOGGLE BTN*/
+.btn{
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
