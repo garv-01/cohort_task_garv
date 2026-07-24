@@ -657,5 +657,196 @@ td{
 
 
 
+register-page{
+    height:calc(100% + 45vh);
+    width: 100%;
+    background-color: #F4F7F6;
+    position: absolute;
+    z-index: 2;
+}
+
+.registerDiv{
+    height: 35%;
+    width: 25%;
+    background-color: #ffffff;
+    position: absolute;
+    left:37vw;
+    top:25vh;
+    border-radius:5px ;
+    padding: 20px;
+}
+
+.registerDiv-heading{
+    height: 15%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+}
+.registerDiv span{
+    background-color: transparent;
+    display: block;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1rem;
+}
+
+.RegisterForm-div{
+    height: 80%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.username-div ,.password-div{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding-top: 20px;
+}
+
+.username-div label ,.password-div label{
+    font-family: 'Inter';
+}
+
+.username-div input,.password-div input{
+    height: 4vh;
+    border-radius: 5px;
+    border: 1px solid #E5E5E5;
+    padding: 5px;
+    font-family: 'Inter';
+}
+
+.registerBtn-div{
+    height: 5vh;
+    width: 100%;
+    background-color: cyan;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#register-btn{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    font-family: 'Inter';
+    background-color: #28A745;
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-page-link{
+    height:3vh;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 10px;
+    font-family: "Inter";
+    font-size: 0.9rem;
+}
+
+.login-page-link a{
+    text-decoration: none;
+}
+
+/* .registerDiv{
+    display:none;
+} */
 
 
+login-page{
+    height:calc(100% + 45vh);
+    width: 100%;
+    background-color: #F4F7F6;
+    position: absolute;
+    z-index: 2;
+    
+}
+
+.loginDiv{
+    height: 35%;
+    width: 25%;
+    background-color: #ffffff;
+    position: absolute;
+    left:37vw;
+    top:25vh;
+    border-radius:5px ;
+    padding: 20px;
+}
+
+.loginDiv-heading{
+    height: 15%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+}
+.loginDiv span{
+    background-color: transparent;
+    display: block;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1rem;
+}
+
+.loginForm-div{
+    height: 80%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.username-div ,.password-div{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding-top: 20px;
+}
+
+.username-div label ,.password-div label{
+    font-family: 'Inter';
+}
+
+.username-div input,.password-div input{
+    height: 4vh;
+    border-radius: 5px;
+    border: 1px solid #E5E5E5;
+    padding: 5px;
+    font-family: 'Inter';
+}
+
+.loginBtn-div{
+    height: 5vh;
+    width: 100%;
+    background-color: cyan;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#login-btn{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    font-family: 'Inter';
+    background-color: #0056B3;
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-page-link{
+    height:3vh;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 10px;
+    font-family: "Inter";
+    font-size: 0.9rem;
+}
+
+.register-page-link a{
+    text-decoration: none;
+}

@@ -61,7 +61,7 @@
                 <div class="kpi">
                      <div class="cards" id="card1">
                         <div  id="card1-icon" class="card-icon">
-                            <img src="/bank-building.png" alt="bank">
+                            <img src="./bank-building.png" alt="bank">
                         </div>
                         <p>Current Balance</p>
                         <h1 id="crd1">₹0.00</h1>
@@ -70,7 +70,7 @@
 
                      <div class="cards" id="card2">
                         <div id="card2-icon" class="card-icon">
-                            <img src="/trend.png" alt="trend up arrow">
+                            <img src="./trend.png" alt="trend up arrow">
                         </div>
                         <p>Total Income</p>
                         <h1 id="crd2">₹0.00</h1>
@@ -79,7 +79,7 @@
 
                      <div class="cards" id="card3">
                         <div id="card3-icon" class="card-icon">
-                            <img src="/downtrend.png" alt="trend down arrow">
+                            <img src="./downtrend.png" alt="trend down arrow">
                         </div>
                         <p>Total Expense</p>
                         <h1 id="crd3">₹0.00</h1>
@@ -88,7 +88,7 @@
 
                      <div class="cards" id="card4">
                         <div id="card4-icon" class="card-icon">
-                            <img src="/piggy.png" alt="piggy bank">
+                            <img src="./piggy.png" alt="piggy bank">
                         </div>
                         <p>Total Transactions</p>
                         <h1 id="crd4">0</h1>
@@ -164,8 +164,8 @@
                                 </td>
                                 <td class="expense">-₹1200.00</td>
                                 <td class="actions">
-                                    <img class="pen-icon" src="/pen.png" alt="pen">
-                                    <img class="bin-icon" src="/trash-bin.png" alt="">
+                                    <img class="pen-icon" src="./pen.png" alt="pen">
+                                    <img class="bin-icon" src="./trash-bin.png" alt="">
                                     
                                 </td>
                             </tr>
@@ -265,7 +265,73 @@
                     </section>
                 </div>
             </div>
-            
+            <register-page>
+                <div class="registerDiv">
+                    <div class="registerDiv-heading">
+                        <h2>Create Account</h2>
+                    </div>
+                    <span>Join FinTrack Pro</span>
+
+                     <div class="RegisterForm-div">
+                        <form>
+                            <div class="username-div">
+                                <label for="username">Choose a Username</label>
+                                <input type="text" required>
+                            </div>
+
+                            <div class="password-div">
+                                <label for="password">Password</label>
+                                <input type="password" required>
+                            </div>
+
+                            <div class="registerBtn-div">
+                                <button id="register-btn" type="submit">Register</button>
+                            </div>
+                            <div class="login-page-link">
+                                <p>Already have an account? <a href="#">Login Here</a></p>
+                            </div>
+                        </form>
+                     </div>
+                </div>
+
+               
+            </register-page>
+
+
+
+
+
+            <login-page>
+                <div class="loginDiv">
+                    <div class="loginDiv-heading">
+                        <h2>Welcome Back</h2>
+                    </div>
+                    <span>Join FinTrack Pro</span>
+
+                     <div class="loginForm-div">
+                        <form>
+                            <div class="username-div">
+                                <label for="username">Enter Your Username</label>
+                                <input type="text" required>
+                            </div>
+
+                            <div class="password-div">
+                                <label for="password">Password</label>
+                                <input type="password" required>
+                            </div>
+
+                            <div class="loginBtn-div">
+                                <button id="login-btn" type="submit">Login</button>
+                            </div>
+                            <div class="login-page-link">
+                                <p>Don't have an account? <a href="#">Register Here</a></p>
+                            </div>
+                        </form>
+                     </div>
+                </div>
+
+               
+            </login-page>
     </main>
   
      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

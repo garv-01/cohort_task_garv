@@ -448,3 +448,204 @@ if (savedName) {
 if (savedCurrency) {
     SettingProfileCurrencyDiv.value = savedCurrency;
 }
+
+
+/* ==========================================================
+   AUTH: REGISTER / LOGIN / LOGOUT
+   ========================================================== */
+
+let registerPage = document.querySelector('register-page');
+let loginPage = document.querySelector('login-page');
+
+// inputs aren't id'd in the markup, so scope by the wrapping divs
+let registerForm = registerPage.querySelector('form');
+let registerUsernameInput = registerPage.querySelector('.username-div input');
+let registerPasswordInput = registerPage.querySelector('.password-div input');
+let goToLoginLink = registerPage.querySelector('.login-page-link a');
+
+let loginForm = loginPage.querySelector('form');
+let loginUsernameInput = loginPage.querySelector('.username-div input');
+let loginPasswordInput = loginPage.querySelector('.password-div input');
+let goToRegisterLink = loginPage.querySelector('.login-page-link a');
+
+// remember the app's normal display values so we can restore them exactly
+let navDefaultDisplay = getComputedStyle(navBar).display;
+let sideBarDefaultDisplay = getComputedStyle(sideBar).display;
+
+function getUsers() {
+    return JSON.parse(localStorage.getItem('fintrack_users')) || [];
+}
+
+function saveUsers(users) {
+    localStorage.setItem('fintrack_users', JSON.stringify(users));
+}
+
+function hideAllScreens() {
+    navBar.style.display = 'none';
+    sideBar.style.display = 'none';
+    heroSection.style.display = 'none';
+    settingPage.style.display = 'none';
+    transactionForm.style.display = 'none';
+    mainContent.style.display = 'none';
+    registerPage.style.display = 'none';
+    loginPage.style.display = 'none';
+}
+
+function applyDisplayName() {
+    let currentSavedName = localStorage.getItem('userName');
+    let loggedInUser = localStorage.getItem('loggedInUser');
+    userName.textContent = currentSavedName || loggedInUser || 'User';
+}
+
+function showApp() {
+    hideAllScreens();
+    navBar.style.display = navDefaultDisplay;
+    sideBar.style.display = sideBarDefaultDisplay;
+    heroSection.style.display = 'block';
+
+    // land on the Dashboard tab every time the app is shown
+    settingMenuBtn.style.backgroundColor = "white";
+    settingMenuBtn.style.color = "black";
+    dashboardMenuBtn.style.backgroundColor = "#DBEAFE";
+    dashboardMenuBtn.style.color = "#1E40AF";
+    addTransactionBtn.style.pointerEvents = 'auto';
+    addTransactionBtn.style.cursor = 'pointer';
+
+    applyDisplayName();
+}
+
+function showLoginPage() {
+    hideAllScreens();
+    loginPage.style.display = 'block';
+    loginForm.reset();
+}
+
+function showRegisterPage() {
+    hideAllScreens();
+    registerPage.style.display = 'block';
+    registerForm.reset();
+}
+
+registerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = registerUsernameInput.value.trim();
+    const password = registerPasswordInput.value;
+
+
+    if (username === "" || password === "") {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    if (username.length < 3) {
+        alert("Username must be at least 3 characters.");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return;
+    }
+
+
+    let users = JSON.parse(localStorage.getItem("fintrack_users")) || [];
+
+
+    let userExists = users.some(user =>
+        user.username.toLowerCase() === username.toLowerCase()
+    );
+
+    if (userExists) {
+        alert("Username already exists. Please Login.");
+        return;
+    }
+
+
+    users.push({
+        username: username,
+        password: password
+    });
+
+    localStorage.setItem("fintrack_users", JSON.stringify(users));
+
+  
+    localStorage.setItem("loggedInUser", username);
+
+    alert("Account Created Successfully!");
+
+    registerForm.reset();
+
+    
+    showApp();
+});
+
+loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = loginUsernameInput.value.trim();
+    const password = loginPasswordInput.value;
+
+  
+    if (username === "" || password === "") {
+        alert("Please enter both username and password.");
+        return;
+    }
+
+   
+    const users = JSON.parse(localStorage.getItem("fintrack_users")) || [];
+
+    // Find matching user
+    const user = users.find(
+        (u) =>
+            u.username.toLowerCase() === username.toLowerCase() &&
+            u.password === password
+    );
+
+    if (!user) {
+        alert("Invalid Username or Password.");
+        return;
+    }
+
+ 
+    localStorage.setItem("loggedInUser", user.username);
+
+    userName.textContent = user.username;
+
+    alert("Login Successful!");
+
+
+    loginForm.reset();
+
+ 
+    showApp();
+});
+
+goToLoginLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('go to login link clicked');
+    showLoginPage();
+});
+
+goToRegisterLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('go to register link clicked');
+    showRegisterPage();
+});
+
+logoutBtn.addEventListener('click', () => {
+    console.log('logout btn clicked');
+    localStorage.removeItem('loggedInUser');
+    showLoginPage();
+});
+
+/* ---- decide what to show when the page first loads ---- */
+let currentUser = localStorage.getItem('loggedInUser');
+
+if (currentUser) {
+    showApp();
+} else if (getUsers().length > 0) {
+    showLoginPage();
+} else {
+    showRegisterPage();
+}
